@@ -1,14 +1,11 @@
 const openMenuBtn = document.querySelector(".navbar__hamburger");
 const closeMenuBtn = document.querySelector(".sidebar__btn");
 const sidebar = document.querySelector(".sidebar");
-
-let isMenuActive = false;
+const backdrop = document.querySelector(".backdrop");
 
 const toggleSidebar = () => {
-  isMenuActive = !isMenuActive;
-  isMenuActive
-    ? sidebar.classList.add("active")
-    : sidebar.classList.remove("active");
+  sidebar.classList.toggle("active");
+  backdrop.classList.toggle("active");
 };
 
 openMenuBtn.addEventListener("click", toggleSidebar);
